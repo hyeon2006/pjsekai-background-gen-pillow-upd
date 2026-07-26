@@ -107,16 +107,16 @@ def render_v3(target: Image.Image) -> Image.Image:
     side_jackets = Image.new("RGBA", (width, height), (0, 0, 0, 0))
 
     left_normal = morph(
-        target, [(566, 161), (1183, 134), (633, 731), (1226, 682)], (width, height)
+        target, [(565, 601), (1184, 573), (632, 1171), (1227, 1122)], (width, height)
     )
     right_normal = morph(
-        target, [(966, 104), (1413, 72), (954, 525), (1390, 524)], (width, height)
+        target, [(966, 543), (1414, 511), (954, 965), (1391, 964)], (width, height)
     )
     left_mirror = morph(
-        target, [(633, 1071), (1256, 1045), (598, 572), (1197, 569)], (width, height)
+        target, [(632, 1512), (1257, 1486), (597, 1012), (1198, 1009)], (width, height)
     )
     right_mirror = morph(
-        target, [(954, 1122), (1393, 1167), (942, 702), (1366, 717)], (width, height)
+        target, [(954, 1563), (1394, 1608), (942, 1143), (1367, 1157)], (width, height)
     )
 
     for img in [left_normal, right_normal, left_mirror, right_mirror]:
@@ -125,10 +125,10 @@ def render_v3(target: Image.Image) -> Image.Image:
     side_jackets.alpha_composite(assets.side_cover)
 
     center_normal = morph(
-        target, [(824, 227), (1224, 227), (833, 608), (1216, 608)], (width, height)
+        target, [(824, 666), (1225, 666), (833, 1048), (1216, 1048)], (width, height)
     )
     center_mirror = morph(
-        target, [(830, 1017), (1214, 1017), (833, 676), (1216, 676)], (width, height)
+        target, [(830, 1458), (1215, 1458), (833, 1116), (1216, 1116)], (width, height)
     )
 
     center = Image.new("RGBA", (width, height), (0, 0, 0, 0))
@@ -153,20 +153,20 @@ def render_v1(target: Image.Image) -> Image.Image:
     side_jackets = Image.new("RGBA", (width, height), (0, 0, 0, 0))
 
     left_normal = morph(
-        target, [(449, 114), (1136, 99), (465, 804), (1152, 789)], (width, height)
+        target, [(449, 507), (1136, 492), (465, 1197), (1152, 1182)], (width, height)
     )
     right_normal = morph(
-        target, [(1018, 92), (1635, 51), (1026, 756), (1630, 740)], (width, height)
+        target, [(1018, 485), (1635, 444), (1026, 1149), (1630, 1133)], (width, height)
     )
 
     for img in [left_normal, right_normal]:
         side_jackets.alpha_composite(img)
 
     center_normal = morph(
-        target, [(798, 193), (1252, 193), (801, 635), (1246, 635)], (width, height)
+        target, [(798, 586), (1252, 586), (801, 1028), (1246, 1028)], (width, height)
     )
     center_mirror = morph(
-        target, [(798, 1152), (1252, 1152), (795, 713), (1252, 713)], (width, height)
+        target, [(798, 1545), (1252, 1545), (795, 1106), (1252, 1106)], (width, height)
     )
 
     center = Image.new("RGBA", (width, height), (0, 0, 0, 0))
