@@ -94,8 +94,8 @@ def mask(image: Image.Image, mask_img: Image.Image) -> Image.Image:
     return Image.fromarray(img_arr, "RGBA")
 
 
-def render(target: Image.Image, enhance: bool = True) -> Image.Image:
-    return render_v3(target, enhance=enhance)
+def render(target: Image.Image) -> Image.Image:
+    return render_v3(target)
 
 
 def render_v3(target: Image.Image) -> Image.Image:
